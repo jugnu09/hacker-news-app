@@ -5,7 +5,7 @@ import { CommentComponent } from "./pages/components/comments/comment.component"
 
 const routes: Routes = [
   { path: 'top-stories', component: TopStoriesComponent },
-  { path: 'comment', component: CommentComponent },
+  { path: 'comment/:id', component: CommentComponent },
 
   { path: '',   redirectTo: '/top-stories', pathMatch: 'full' },
 ];

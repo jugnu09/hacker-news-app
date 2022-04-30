@@ -2,8 +2,8 @@ import { Injectable, Injector } from '@angular/core';
 import { HackerNewsService } from './hacker-news.service';
 
 @Injectable({
-  providedIn: 'root',
-})
+    providedIn: 'root',
+  })
 
 export class FacadeService {
     private _hackerNewsService : HackerNewsService;
@@ -15,16 +15,15 @@ export class FacadeService {
         return this._hackerNewsService;
     }
 
-
     getTopStories(numberOfStory: number) {
         return this.hackerNewsService.getTopStories(numberOfStory);
     }
 
     getItem(id: number | string) {
-        return this._hackerNewsService.getItem(id);
+        return this.hackerNewsService.getItem(id);
     }
 
     getTopComments(kids: number[]) {
-        return this._hackerNewsService.getTopComments(kids);
+        return this.hackerNewsService.getTopComments(kids);
     }
 }

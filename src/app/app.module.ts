@@ -11,11 +11,13 @@ import { StoryHeadlineComponent } from './pages/components/story-headline/story-
 import { CommentComponent } from './pages/components/comments/comment.component';
 import { CommentItemComponent } from './pages/components/comment-item/comment-item.component';
 import { HostnamePipe } from './core/pipes/hostname.pipe';
+import { HackerNewsService } from './services/hacker-news.service';
+import { FacadeService } from './services/facade.service';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, TopStoriesComponent, StoryHeadlineComponent, CommentComponent, CommentItemComponent, HostnamePipe],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [],
+  providers: [HackerNewsService,FacadeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -17,7 +17,7 @@ export class CommentComponent implements OnInit {
   constructor(private _facadeService: FacadeService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const storyId = this.route.snapshot.queryParams.id;
+    const storyId = this.route.snapshot.params.id;
     this.setStory(storyId);
   }
 
