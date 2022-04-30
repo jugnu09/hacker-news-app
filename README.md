@@ -1,6 +1,7 @@
 # HackerNewsStredigi
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
+Hacker news website with top 5 stories and top 3 comments.
 
 ## Development server
 
