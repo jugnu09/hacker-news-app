@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { TopStoriesComponent } from "./pages/components/top-stories.container.component";
+import { CommentComponent } from "./pages/components/comments/comment.component";
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'top-stories', component: TopStoriesComponent },
+  { path: 'comment', component: CommentComponent },
+
+  { path: '',   redirectTo: '/top-stories', pathMatch: 'full' },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  background-color: #ff6600;
+  color: black;
+  align-items: center;
+  padding: 4px 8px 6px 4px;
+
+  @media screen and (min-width: 768px) {
+    padding: 2px 4px 0;
+    height: 40px;
+    font-size: 10pt;
+  }
+  .logo {
+    margin-right: 8px;
+
+    &__image {
+      border: 1px white solid;
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+  .brand {
+    a {
+      font-size: 15px;
+      font-weight: bold;
+      margin-right: 8px;
+      @media screen and (min-width: 768px) {
+        font-size: 10pt;
+      }
+    }
+  }
+
+  .menu {
+    justify-self: start;
+    font-size: 12px;
+    @media screen and (min-width: 768px) {
+      font-size: 10pt;
+    }
+  }
+
+  .login {
+    margin-left: auto;
+    justify-self: end;
+    font-size: 12px;
+  }
+}

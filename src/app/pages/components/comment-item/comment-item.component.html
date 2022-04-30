@@ -1,0 +1,24 @@
+<div class="comment-item">
+  <div class="comment-item__upvote">
+    <a href="#"> <img class="upvote-arrow" src="assets/img/arrow.gif" alt="upvote" /></a>
+  </div>
+  <div class="comment-item__info">
+    <span>
+      <a *ngIf="comment?.by" href="#" class="comment-item__author">{{ comment.by }}</a>
+    </span>
+    <a *ngIf="commentTime" href="#" class="comment-item__creation-time">{{ commentTime }}</a>
+    <div class="comment-item__next">
+      <span>| </span>
+      <a href="#">next</a>
+    </div>
+    <div class="comment-item__hide">
+      <span>[</span>
+      <a href="#">-</a>
+      <span>]</span>
+    </div>
+    <div class="line-break"></div>
+    <div class="comment-item__text" [innerHTML]="comment.text"></div>
+    <div class="line-break"></div>
+    <a class="comment-item__reply" href="#">reply</a>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="top-stories">
+  <ng-container *ngFor="let story of stories$ | async; index as i">
+    <app-story-headline [serialNumber]="i + 1" [story]="story"></app-story-headline>
+  </ng-container>
+</div>

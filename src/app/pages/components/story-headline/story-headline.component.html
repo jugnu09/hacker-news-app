@@ -1,0 +1,27 @@
+<div class="story-item">
+  <div *ngIf="serialNumber" class="story-item__serialnumber">{{ serialNumber }}.</div>
+  <div class="story-item__upvote">
+    <a href="#"> <img class="upvote-arrow" src="assets/img/arrow.gif" alt="upvote" /></a>
+  </div>
+  <div class="story-item__info">
+    <a *ngIf="story?.title" href="#" class="story-item__title"> {{ story.title }}</a>
+    <div *ngIf="storyUrl" class="story-item__url">
+      <span>(</span>
+      <a href="{{story.url}}" target="_blank">{{ storyUrl| hostname  }}</a>
+      <span>)</span>
+    </div>
+    <div class="line-break"></div>
+    
+    <div *ngIf="story?.score" class="story-item__score">{{ story.score }} points </div>
+    <span>
+      &nbsp;by <a *ngIf="story?.by" href="#" class="story-item__author">{{ story.by }}&nbsp;</a>
+    </span>
+    <a *ngIf="commentTime" href="#" class="story-item__creation-time">{{ commentTime }}</a>
+    <div class="story-item__hide">
+      <span>| </span>
+      <a href="#">hide</a>
+      <span> |</span>
+    </div>
+    <a class="story-item__comments" (click)="goToStory()"> {{ story?.descendants || 0 }} comments </a>
+  </div>
+</div>

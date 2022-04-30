@@ -1,0 +1,60 @@
+.story-item {
+  display: flex;
+  margin-bottom: 5px;
+
+  &__serialnumber {
+    flex-shrink: 0;
+    font-size: 11pt;
+    color: #000000;
+    @media screen and (min-width: 768px) {
+      font-size: 10pt;
+    }
+  }
+
+  &__upvote {
+    flex-shrink: 0;
+    .upvote-arrow {
+      margin: 0 4px;
+      width: 13px;
+      height: 13px;
+      @media screen and (min-width: 768px) {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 4px;
+    align-items: center;
+    font-size: 9pt;
+    @media screen and (min-width: 768px) {
+      font-size: 7pt;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    color: black;
+    font-size: 11pt;
+    &:hover {
+      text-decoration: none !important;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 10pt;
+    }
+  }
+
+  &__url {
+    font-size: 8pt;
+  }
+
+  &__comments {
+    cursor: pointer;
+  }
+}

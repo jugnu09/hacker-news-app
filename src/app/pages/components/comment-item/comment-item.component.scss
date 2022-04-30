@@ -1,0 +1,40 @@
+.comment-item {
+  display: flex;
+  margin-bottom: 5px;
+
+  &__upvote {
+    flex-shrink: 0;
+    .upvote-arrow {
+      margin: 0 4px;
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 4px;
+    align-items: center;
+    font-size: 8pt;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__text {
+    padding-top: 4px;
+    font-size: 10pt;
+    color: black;
+    @media screen and (min-width: 768px) {
+      font-size: 9pt;
+    }
+  }
+
+  &__reply {
+    color: black;
+    text-decoration: underline;
+    padding: 4px 0;
+  }
+}

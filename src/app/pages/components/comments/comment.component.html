@@ -1,0 +1,15 @@
+<div class="story-page">
+  <ng-container *ngIf="story; else loading">
+    <app-story-headline [story]="story" [serialNumber]="undefined"></app-story-headline>
+    <form class="story-page__form">
+      <textarea class="story-page__form__textarea" name="text" rows="6" cols="60"></textarea>
+      <br /><br />
+      <button type="button" class="story-page__form__submit">add comment</button>
+    </form>
+    <ng-container *ngFor="let comment of comments$ | async; index as i">
+      <app-comment-item [comment]="comment"></app-comment-item>
+    </ng-container>
+  </ng-container>
+</div>
+
+<ng-template #loading>loading...</ng-template>
