@@ -23,7 +23,7 @@ export class StoryHeadlineComponent implements OnInit {
     this.commentTime = DateUtils.getCommentTime(this.story?.time);
   }
 
-  goToStory() {
-    this._commonService.navigateToWithData(Hacker_NEWS_ROUTES.STORY, this.story.id)
+  goToComment() {
+    this._commonService.navigateToWithData(Hacker_NEWS_ROUTES.COMMENT, this.story.id)
   }
 }

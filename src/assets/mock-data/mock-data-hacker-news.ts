@@ -11,7 +11,7 @@ export const itemMockData: IStory = {
     title: 'Mock title',
     type: 'Story',
     url: 'www.google.com'  
-    }
+}
 
 export const commentMockData: IComment = {
     by: 'ABC',
@@ -22,3 +22,15 @@ export const commentMockData: IComment = {
     time: 12,
     type: "comment"   
 }
+
+export const topStoryMockData: IStory[] = [{
+    by: 'rwr',
+    descendants: 123,
+    id: 1,
+    kids: [],
+    score: 5,
+    time: 4,
+    title: 'Mock title',
+    type: 'Story',
+    url: 'www.google.com'  
+}]
