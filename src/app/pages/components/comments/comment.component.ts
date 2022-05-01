@@ -18,10 +18,10 @@ export class CommentComponent implements OnInit {
 
   ngOnInit(): void {
     const storyId = this.route.snapshot.params.id;
-    this.setStory(storyId);
+    this.getComment(storyId);
   }
 
-  setStory(id: number | string) {
+  getComment(id: number | string) {
     this._facadeService.getItem(id).subscribe((story) => {
       this.story = story;
       if (story.kids?.length) {

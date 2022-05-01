@@ -12,7 +12,6 @@ describe('DateUtils', () => {
 
     it('should return undefined when called with undefined', () => {
       const result = DateUtils.getCommentTime(undefined);
-
       expect(result).toBeUndefined();
     });
   });

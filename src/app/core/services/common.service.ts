@@ -10,7 +10,6 @@ export class CommonServie {
     constructor(private _router: Router) {}
 
     navigateToWithData(url?: string, id?: any): void {
-        // this._router.navigate([url], { queryParams: { id: id }});
         this._router.navigate([url, id], {queryParamsHandling: 'merge'});
     }
 }

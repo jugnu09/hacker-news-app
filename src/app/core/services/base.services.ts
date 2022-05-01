@@ -7,10 +7,11 @@ import { Observable } from "rxjs";
 })
 
 export class BaseService {
-    apiBaseURL =  "https://hacker-news.firebaseio.com/v0/";
-    constructor(public _httpClient: HttpClient) { }
+    apiBaseUrl: string;
+    constructor(public _httpClient: HttpClient) {
+     }
     
     get<T>(url) : Observable<T> {
-        return this._httpClient.get<T>(this.apiBaseURL + url)
+        return this._httpClient.get<T>(this.apiBaseUrl + url)
     }
 }

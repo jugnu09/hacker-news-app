@@ -9,7 +9,7 @@ import { FacadeService } from 'src/app/services/facade.service';
   styleUrls: ['./top-stories.container.component.scss']
 })
 export class TopStoriesComponent implements OnInit {
-  stories$!: Observable<IStory[]>;
+  stories$: Observable<IStory[]>;
   storyCount= 5;
   constructor(private _facadeService: FacadeService) {}
 

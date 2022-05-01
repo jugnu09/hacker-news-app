@@ -25,11 +25,11 @@ export class HackerNewsService {
     );
   }
 
-  getItem(id: number | string) {
+  getItem(id: number | string): Observable<IStory> {
     return this._baseService.get<IStory>(NEWS_URL_CONFIG.ITEM + id + NEWS_URL_CONFIG.EXTENSION);
   }
 
-  getTopComments(kids: number[]) {
+  getTopComments(kids: number[]): Observable<IComment[]> {
     return forkJoin(
       kids.map((id) => {
         return this._baseService.get<IComment>(NEWS_URL_CONFIG.ITEM + id + NEWS_URL_CONFIG.EXTENSION);

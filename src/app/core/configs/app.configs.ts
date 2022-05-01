@@ -5,5 +5,5 @@ export const NEWS_URL_CONFIG = {
 }
 
 export const APP_CONFIG = {
-    CONFIG_URL : 'assets/config/config.json'
+    CONFIG_URL : 'assets/configs/config.json'
 }

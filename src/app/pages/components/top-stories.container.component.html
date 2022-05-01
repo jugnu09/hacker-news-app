@@ -1,5 +1,6 @@
-<div class="top-stories">
+<div class="top-stories" *ngIf="stories$| async as story; else loading">
   <ng-container *ngFor="let story of stories$ | async; index as i">
     <app-story-headline [serialNumber]="i + 1" [story]="story"></app-story-headline>
   </ng-container>
 </div>
+<ng-template #loading>Data loading...</ng-template>

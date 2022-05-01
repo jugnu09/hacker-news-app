@@ -22,6 +22,6 @@
       <a href="#">hide</a>
       <span> |</span>
     </div>
-    <a class="story-item__comments" (click)="goToComment()"> {{ story?.descendants || 0 }} comments </a>
+    <a class="story-item__comments" (click)="openTopThreeComments()"> {{ story?.descendants || 0 }} comments </a>
   </div>
 </div>

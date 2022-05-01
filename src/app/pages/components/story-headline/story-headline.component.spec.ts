@@ -29,5 +29,4 @@ describe('StoryHeadlineComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });

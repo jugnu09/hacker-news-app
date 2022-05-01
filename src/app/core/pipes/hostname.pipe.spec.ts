@@ -5,7 +5,7 @@ describe('DomainPipe', () => {
     const pipe = new HostnamePipe();
     expect(pipe).toBeTruthy();
   });
-
+  
   it('returns hostname when url is passed', () => {
     const pipe = new HostnamePipe();
     expect(pipe.transform('https://www.resonacle.com')).toEqual('resonacle.com');
