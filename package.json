@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prepush": "npm run lint && npm test && npm run build: prod",
+    "postinstall": "ngcc",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
